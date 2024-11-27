@@ -1,6 +1,7 @@
-import { HomeIcon, File, UsersRound, UserRound } from "lucide-react";
+import { HomeIcon, File, UsersRound } from "lucide-react";
 import NavButton from "@/components/NavButton";
 import Link from "next/link";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export default function Header() {
   return (
@@ -13,12 +14,15 @@ export default function Header() {
             className="flex justify-center items-center ml-0"
             title="Home"
           >
-            <h1 className="hidden sm:block text-xl font-bold m-0 mt-1">Computer Repair Shop</h1>
+            <h1 className="hidden sm:block text-xl font-bold m-0 mt-1">
+              Computer Repair Shop
+            </h1>
           </Link>
         </div>
         <div className="flex items-center">
-        <NavButton href="/tickets" label="Tickets" icon={File} />
-        <NavButton href="/customers" label="Customers" icon={UserRound} />
+          <NavButton href="/tickets" label="Tickets" icon={File} />
+          <NavButton href="/customers" label="Customers" icon={UsersRound} />
+          <ModeToggle/>
         </div>
       </div>
     </header>
